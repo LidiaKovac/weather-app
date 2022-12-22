@@ -1,11 +1,7 @@
-import { FC } from "react"
-import "./Location.scss"
-interface LocationProps {
-    city: string
-    country: string
-}
+import "./Location.css"
 
-export const Location: FC<LocationProps> = ({ city, country }) => {
+
+export const Location = ({ city, country }) => {
     return (
         <div className="location__wrap">
             <div className="location__city">

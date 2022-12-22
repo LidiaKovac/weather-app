@@ -1,8 +1,7 @@
-@import "../../styles/colors";
 .time__wrap {
     height: 100%;
     display: flex;
     align-items: center;
-    color: $white;
+    color: rgb(236, 235, 228, 1);
     font-size: 20pt;
 }
