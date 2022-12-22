@@ -1,0 +1,48 @@
+.sidebar__wrap {
+  height: 100%;
+  width: 30%;
+  min-width: 450px;
+  color: rgb(236, 235, 228, 1);
+  background: rgb(21, 59, 80);
+  background: -moz-linear-gradient(149deg, rgba(21, 59, 80, 1) 50%, rgba(66, 158, 166, 1) 100%);
+  background: -webkit-linear-gradient(149deg, rgba(21, 59, 80, 1) 50%, rgba(66, 158, 166, 1) 100%);
+  background: linear-gradient(149deg, rgba(21, 59, 80, 1) 50%, rgba(66, 158, 166, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#153b50",endColorstr="#429ea6",GradientType=1);
+  text-transform: capitalize;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+h3 {
+  font-weight: normal;
+  font-size: 24px;
+}
+.sidebar__location {
+  display: flex;
+  justify-content: space-between;
+  height: 10%;
+}
+.sidebar__weather {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18pt;
+  padding-bottom: 40px;
+  border-bottom: rgb(236, 235, 228, 0.5) solid 1px;
+}
+
+.sidebar__weather-icon {
+  width: 30%;
+}
+.temperature {
+  font-size: 35pt;
+  color: rgb(236, 235, 228, 1);
+}
+
+.suntimes__wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

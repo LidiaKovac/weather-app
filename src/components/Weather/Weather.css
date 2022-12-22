@@ -1,0 +1,6 @@
+.weather__wrap {
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+
+}
