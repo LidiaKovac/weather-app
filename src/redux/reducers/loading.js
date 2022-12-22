@@ -1,6 +1,3 @@
-import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { fetchWeather } from "../../API";
-
 const initialState = {
   value: true,
 };

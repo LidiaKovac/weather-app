@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { MagnifyingGlass } from "react-loader-spinner";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
