@@ -1,0 +1,11 @@
+nav {
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    padding-top: 50px;
+    gap: 50px
+}
+
+/* nav>* {
+    flex: 1 1 0
+} */
