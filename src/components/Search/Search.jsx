@@ -16,6 +16,9 @@ export const Search = () => {
           payload: { name: fetchedData.city.name, country: fetchedData.city.country, coords: fetchedData.city.coord },
         });
       })
+      .catch(err => {
+        dispatch({type: "SET_ERROR", payload: err || "Error!"})
+      })
       .finally(() => {
         dispatch({ type: "SET_LOADING", payload: false });
       });

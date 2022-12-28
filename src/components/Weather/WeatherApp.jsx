@@ -3,6 +3,7 @@ import { MagnifyingGlass } from "react-loader-spinner";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { fetchWeather } from "../../API";
+import { Error } from "../Error/Error";
 import { Main } from "../Main/Main";
 import { Navbar } from "../Navbar/Navbar";
 import { Sidebar } from "../Sidebar/Sidebar";
@@ -17,6 +18,9 @@ export const Weather = () => {
           type: "SET_LOCATION",
           payload: { name: fetchedData.city.name, country: fetchedData.city.country, coords: fetchedData.city.coord },
         });
+      })
+      .catch(err => {
+        dispatch({type: "SET_ERROR", payload: err || "Error!"})
       })
       .finally(() => {
         dispatch({ type: "SET_LOADING", payload: false });
@@ -41,6 +45,7 @@ export const Weather = () => {
         <Main />
         <Sidebar />
       </div>
+      <Error/>
     </>
   );
 };
