@@ -6,18 +6,19 @@ import { Time } from "../Time/Time";
 import "./Sidebar.css";
 export const Sidebar = () => {
   const { city, country } = useSelector((state) => state.location);
-  const { id, description } = useSelector((state) => state.weather.days[0].weather[0]);
+  const { id, description } = useSelector((state) => state.weather.days[1].weather[0]);
   const { sunrise, sunset } = useSelector((state) => state.weather);
-  const temperature = useSelector((state) => state.weather.days[0].main.temp);
+  const temperature = useSelector((state) => state.weather.days[1].main.temp);
 
   return (
-    <div className="sidebar__wrap">
+    <aside className="sidebar__wrap">
       <div className="sidebar__location">
         <Location city={city} country={country} />
         <Time />
       </div>
-
-      <Icon status={id} />
+      <div className="sidebar__icon">
+        <Icon status={id} />
+      </div>
       <div className="sidebar__weather">
         <div className="temperature">{temperature}° C</div>
         <div className="weather__description">{description}</div>
@@ -27,6 +28,6 @@ export const Sidebar = () => {
         <Suntime type="sunrise" timestamp={sunrise} />
         <Suntime type="sunset" timestamp={sunset} />
       </div>
-    </div>
+    </aside>
   );
 };

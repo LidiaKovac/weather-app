@@ -8,7 +8,7 @@ import {
   WiSnowWind,
   WiFog,
   WiDaySunny,
-  WiDayCloudy,
+  WiCloudy,
 } from "react-icons/wi";
 
 export const Icon = ({ status }) => {
@@ -37,7 +37,7 @@ export const Icon = ({ status }) => {
         ) : status === 800 ? (
           <WiDaySunny />
         ) : status > 800 && status < 900 ? (
-          <WiDayCloudy />
+          <WiCloudy />
         ) : (
           ""
         )}

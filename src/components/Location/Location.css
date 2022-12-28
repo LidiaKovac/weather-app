@@ -1,9 +1,9 @@
 .location__city {
     color: rgb(236, 235, 228, 1);
-    font-size: 22pt;
+    font-size: 32pt;
 }
 
 .location__country {
-    font-size: 15pt;
+    font-size: 25pt;
     color: rgb(236, 235, 228, 0.7);
 }

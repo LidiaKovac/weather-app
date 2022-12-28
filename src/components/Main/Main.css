@@ -1,4 +1,12 @@
 main {
     width: 70%;
     height: 100%;
+    
+}
+
+.main__cards {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px;
+    gap: 20px;
 }

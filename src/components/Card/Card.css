@@ -1,0 +1,54 @@
+.card__wrap {
+  display: flex;
+  align-items: center;
+  flex: 1 1 calc(50% - 20px);
+
+  background-color: rgb(0, 0, 0, 0.03);
+  padding: 30px;
+  color: rgb(21, 59, 80, 1);
+}
+
+.card__icon {
+  flex: 1 1 0;
+}
+
+.card__icon svg {
+  width: 60%;
+  height: 60%;
+}
+
+.card__body {
+  flex: 1.5 1 0;
+}
+
+.card__data {
+  font-size: 35px;
+  font-weight: 600;
+}
+
+.card__title {
+  color: grey;
+  font-size: 18px;
+}
+
+.card__variation {
+  font-size: 18px;
+
+  flex: 0.7 1 0;
+  color: grey;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.card__variation svg.up {
+  color: green;
+}
+
+.card__variation svg.down {
+  color: red;
+}
+
+.card__variation svg.equal {
+    color: blue;
+  }
