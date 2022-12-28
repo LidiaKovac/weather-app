@@ -1,5 +1,5 @@
 import countryCodes from "./countryCode.json";
-const URL = "http://api.openweathermap.org/";
+const URL = "https://api.openweathermap.org/";
 const { REACT_APP_WEATHER_API_KEY } = process.env;
 export const fetchWeather = async (city, country) => {
   // city && country => type string
