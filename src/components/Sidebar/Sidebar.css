@@ -2,12 +2,11 @@
   height: 100%;
   width: 30%;
   min-width: 450px;
-  color: rgb(236, 235, 228, 1);
-  background: rgb(21, 59, 80);
-  background: -moz-linear-gradient(149deg, rgba(21, 59, 80, 1) 50%, rgba(66, 158, 166, 1) 100%);
-  background: -webkit-linear-gradient(149deg, rgba(21, 59, 80, 1) 50%, rgba(66, 158, 166, 1) 100%);
-  background: linear-gradient(149deg, rgba(21, 59, 80, 1) 50%, rgba(66, 158, 166, 1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#153b50",endColorstr="#429ea6",GradientType=1);
+  /* background: rgb(21, 59, 80,1); */
+  background: -moz-linear-gradient(149deg, rgb(244, 209, 174) 50%, white 100%);
+  background: -webkit-linear-gradient(149deg, rgb(244, 209, 174) 50%, white 100%);
+  background: linear-gradient(149deg, rgb(244, 209, 174) 50%, white 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="rgb(244, 209, 174)",endColorstr="white",GradientType=1);
   text-transform: capitalize;
   padding: 35px;
   display: flex;
@@ -36,7 +35,7 @@ h3 {
   justify-content: space-between;
   font-size: 15pt;
   padding-bottom: 20px;
-  border-bottom: rgb(236, 235, 228, 0.5) solid 1px;
+  border-bottom: rgb(18, 38, 58, 0.3) solid 1px;
 }
 
 .weather__description {
@@ -46,7 +45,6 @@ h3 {
 .temperature {
   font-size: 35pt;
   font-weight: 600;
-  color: rgb(236, 235, 228, 1);
 }
 
 .suntimes__wrap {

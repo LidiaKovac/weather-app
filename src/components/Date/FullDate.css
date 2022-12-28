@@ -7,14 +7,13 @@
 
 
 .date__month {
-    color: rgb(21, 59, 80, 1);
     font-weight: bold;
     font-size: 25px;
 }
 
 
 .date__full {
-    color: rgb(21, 59, 80, 0.5);
+    color: rgb(18, 38, 58, 0.5)
 }
 
 @media screen and (max-width: 1060px) {

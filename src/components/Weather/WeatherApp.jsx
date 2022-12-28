@@ -38,7 +38,6 @@ export const Weather = () => {
     <>
       <Navbar />
       <div className="weather__wrap">
-
         <Main />
         <Sidebar />
       </div>

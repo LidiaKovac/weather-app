@@ -7,6 +7,7 @@ export const Search = () => {
   const handleSearch = (ev) => {
     if(ev.key === "Enter") {
       console.log(ev.target.value);
+      dispatch({ type: "SET_LOADING", payload: true });
       fetchWeather(ev.target.value, "")
       .then((fetchedData) => {
         dispatch({ type: "SET_WEATHER_DATA", payload: fetchedData });
