@@ -15,7 +15,9 @@
   justify-content: space-evenly;
   gap: 40px;
   overflow-y: auto;
-  position: relative;
+  position: fixed;
+  top: 0;
+  right: 0;
 }
 
 h3 {
@@ -58,4 +60,51 @@ h3 {
   position: absolute;
   right: 0;
   top: 10%;
+}
+
+@media screen and (max-width: 1060px) {
+  .sidebar__wrap {
+    min-width: 350px;
+  }
+  .temperature {
+    font-size: 35px;
+  }
+  .weather__description {
+    font-size: 20px;
+  }
+  h3 {
+    font-size: 25px;
+  }
+}
+
+
+@media screen and (max-width: 900px) {
+  aside.sidebar__wrap {
+    order: 1;
+    position: static!important;
+    width: unset!important;
+    min-width: 0px;
+    overflow-y: visible;
+    margin: 30px;
+    border-radius: 30px;
+  }
+  .sidebar__icon {
+    top: 30%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  aside.sidebar__wrap {
+    margin: 15px!important;
+    padding: 25px;
+  }
+  .temperature {
+    font-size: 30px;
+  }
+  .weather__description {
+    font-size: 15px;
+  }
+  h3 {
+    font-size: 20px;
+  }
 }

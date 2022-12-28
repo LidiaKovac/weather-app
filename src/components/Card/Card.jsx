@@ -1,22 +1,23 @@
 import "./Card.css";
-import { WiStrongWind, WiHumidity, WiSprinkle, WiBarometer } from "react-icons/wi";
+import { WiStrongWind, WiHumidity, WiSprinkle, WiThermometer } from "react-icons/wi";
 import { BsArrowUpShort, BsArrowDownShort } from "react-icons/bs";
 import { TiEquals } from "react-icons/ti";
 import { useEffect, useState } from "react";
 export const Card = ({ title, data, unit, prevData }) => {
-  const [convertedData, setData] = useState(data);
-  const [convertedPrevData, setPrevData] = useState(prevData);
+  const [convertedData, setData] = useState(Number(data));
+  const [convertedPrevData, setPrevData] = useState(Number(prevData));
   const [diff, setDiff] = useState(0);
 
   useEffect(() => {
     // by default, wind speed is in m/s, but we want it in km/h
     // conversion from m/.s to km/h you multiply by 3.6
     if (title === "Wind Speed" && unit === "km/h") {
-      setData(data * 3, 6);
-      setPrevData(prevData * 3, 6);
+      setData((Number(data) * 3.6).toFixed(1));
+      setPrevData((Number(prevData) * 3.6).toFixed(1));
     } else if (title === "Rain Chance") {
-      setData(data * 10);
-      setPrevData(prevData * 10);
+        //rain chance is delivered by api in a format that goes from 0 to 1
+      setData(Number(data) * 100);
+      setPrevData(Number(prevData) * 100);
     }
     setDiff(Math.abs(convertedData - convertedPrevData).toFixed(1));
   });
@@ -27,8 +28,8 @@ export const Card = ({ title, data, unit, prevData }) => {
           <WiStrongWind />
         ) : title === "Rain Chance" ? (
           <WiSprinkle />
-        ) : title === "Pressure" ? (
-          <WiBarometer />
+        ) : title === "Temperature" ? (
+          <WiThermometer />
         ) : (
           <WiHumidity/>
         )}

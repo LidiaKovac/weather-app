@@ -42,3 +42,16 @@ h4 {
   width: 100%;
 }
 
+
+@media screen and (max-width: 1060px) {
+  h4 {
+    font-size: 20px;
+  }
+  .time__difference {
+    font-size: 15px
+  }
+  .sunrise__wrap, .sunset__wrap {
+    font-size: 25px;
+    padding: 20px;
+  }
+}

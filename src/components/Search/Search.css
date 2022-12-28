@@ -36,3 +36,15 @@ input::-ms-input-placeholder {
   /* Microsoft Edge */
   color: rgb(0, 0, 0, 0.5);
 }
+
+
+@media screen and (max-width: 400px) {
+  .search__input-wrap input {
+   font-size: 15px;
+  }
+  .search__input-wrap svg {
+    
+    width: 30px;
+    
+  }
+}

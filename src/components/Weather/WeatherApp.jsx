@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { fetchWeather } from "../../API";
 import { Main } from "../Main/Main";
+import { Navbar } from "../Navbar/Navbar";
 import { Sidebar } from "../Sidebar/Sidebar";
 import "./Weather.css";
 export const Weather = () => {
@@ -35,7 +36,9 @@ export const Weather = () => {
     />
   ) : (
     <>
+      <Navbar />
       <div className="weather__wrap">
+
         <Main />
         <Sidebar />
       </div>

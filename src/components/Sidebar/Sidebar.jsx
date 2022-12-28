@@ -14,7 +14,7 @@ export const Sidebar = () => {
     <aside className="sidebar__wrap">
       <div className="sidebar__location">
         <Location city={city} country={country} />
-        <Time />
+        <Time color={"rgb(236, 235, 228, 1)"} size={30} />
       </div>
       <div className="sidebar__icon">
         <Icon status={id} />

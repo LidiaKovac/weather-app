@@ -1,6 +1,10 @@
-.date {
-
+.date--lg {
+    display: block;
 }
+.date--md, .date--xs {
+    display: none;
+}
+
 
 .date__month {
     color: rgb(21, 59, 80, 1);
@@ -12,3 +16,34 @@
 .date__full {
     color: rgb(21, 59, 80, 0.5);
 }
+
+@media screen and (max-width: 1060px) {
+    .date--lg {
+        display: none;
+    }
+    .date--md {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 465px) {
+    .date--md, .date--xs {
+        display: none;
+    }
+    .date--lg {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .date {
+        text-align: center;
+    }
+    .date__month {
+        font-size: 20px;
+    }
+    .date__full {
+        font-size: 15px;
+    }
+  }
+  

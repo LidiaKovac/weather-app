@@ -1,6 +1,13 @@
 .weather__wrap {
-    height: 100vh;
+    /* height: 100vh; */
     font-family: 'Poppins', sans-serif;
     display: flex;
 
+}
+
+
+@media screen and (max-width: 900px) {
+  .weather__wrap {
+    flex-direction: column;
+  }
 }

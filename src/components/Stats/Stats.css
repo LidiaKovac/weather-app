@@ -1,0 +1,15 @@
+.stats__wrap {
+  background-color: rgb(0, 0, 0, 0.03);
+  width: 100%;
+  
+  padding: 20px;
+  border-radius: 20px;
+}
+
+
+.stats__title {
+    
+    font-size: 18px;
+    margin: 5px;
+}
+
