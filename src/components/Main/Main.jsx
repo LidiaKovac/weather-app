@@ -1,11 +1,9 @@
 import { useSelector } from "react-redux";
 import { Card } from "../Card/Card";
-import { Navbar } from "../Navbar/Navbar";
 import { Stats } from "../Stats/Stats";
 import "./Main.css";
 export const Main = () => {
-  const { id, description } = useSelector((state) => state.weather.days[1].weather[0]);
-  const { sunrise, sunset, days } = useSelector((state) => state.weather);
+  const { days } = useSelector((state) => state.weather);
   const { main, wind, pop } = useSelector((state) => state.weather.days[1]);
   const { main: prevMain, wind: prevWind, pop: prevPop } = useSelector((state) => state.weather.days[0]);
 

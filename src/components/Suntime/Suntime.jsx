@@ -7,7 +7,6 @@ export const Suntime = ({ timestamp, type }) => {
   const [time, setTime] = useState("0:00");
   const [timeDiff, setTimeDiff] = useState("0");
   const { timezone } = useSelector((state) => state.weather);
-  const { now } = useSelector((state) => state.localTime);
   useEffect(() => {
     setTime(convertToString(timestamp));
     calculateDiff(timestamp);

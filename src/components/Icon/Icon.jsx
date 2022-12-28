@@ -12,13 +12,13 @@ import {
 } from "react-icons/wi";
 
 export const Icon = ({ status }) => {
-  {
+  
     /* id is the status code of the weather, check this for more details: 
         https://openweathermap.org/weather-conditions
     */
-  }
+  
   return (
-    <>
+    
       <div className="icon__wrap">
         {status < 300 ? (
           <WiStormShowers />
@@ -36,12 +36,10 @@ export const Icon = ({ status }) => {
           <WiFog />
         ) : status === 800 ? (
           <WiDaySunny />
-        ) : status > 800 && status < 900 ? (
-          <WiCloudy />
         ) : (
-          ""
+          <WiCloudy />
         )}
       </div>
-    </>
+    
   );
 };
