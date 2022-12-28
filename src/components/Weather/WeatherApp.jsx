@@ -8,7 +8,6 @@ import { Sidebar } from "../Sidebar/Sidebar";
 import "./Weather.css";
 export const Weather = () => {
   const dispatch = useDispatch();
-  const weather = useSelector((state) => state.weather);
   useEffect(() => {
     fetchWeather("Genova", "IT")
       .then((fetchedData) => {

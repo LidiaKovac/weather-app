@@ -9,15 +9,18 @@
   background: linear-gradient(149deg, rgba(21, 59, 80, 1) 50%, rgba(66, 158, 166, 1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#153b50",endColorstr="#429ea6",GradientType=1);
   text-transform: capitalize;
-  padding: 50px;
+  padding: 35px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 30px;
+  overflow-y: auto;
 }
 
 h3 {
   font-weight: normal;
   font-size: 24px;
+  margin: 0px;
 }
 .sidebar__location {
   display: flex;
@@ -29,15 +32,19 @@ h3 {
   justify-content: space-between;
   align-items: center;
   font-size: 18pt;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
   border-bottom: rgb(236, 235, 228, 0.5) solid 1px;
+}
+
+.weather__description {
+  width: 40%;
 }
 
 .sidebar__weather-icon {
   width: 30%;
 }
 .temperature {
-  font-size: 35pt;
+  font-size: 30pt;
   color: rgb(236, 235, 228, 1);
 }
 

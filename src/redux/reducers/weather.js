@@ -35,7 +35,8 @@ const initialState = {
     },
   ],
   sunrise: 0,
-  sunset: 0
+  sunset: 0,
+  timezone: 0
 };
 
 export const weatherReducer = (state = initialState, { type, payload }) => {
@@ -47,8 +48,8 @@ export const weatherReducer = (state = initialState, { type, payload }) => {
         ...state,
         days: payload.list,
         sunrise: payload.city.sunrise,
-        sunset: payload.city.sunset
-        
+        sunset: payload.city.sunset,
+        timezone: payload.city.timezone
       };
 
     default:

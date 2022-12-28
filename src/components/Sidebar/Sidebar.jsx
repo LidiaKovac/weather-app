@@ -6,7 +6,7 @@ import { Time } from "../Time/Time";
 import "./Sidebar.css";
 export const Sidebar = () => {
   const { city, country } = useSelector((state) => state.location);
-  const { id, main, description } = useSelector((state) => state.weather.days[0].weather[0]);
+  const { id, description } = useSelector((state) => state.weather.days[0].weather[0]);
   const { sunrise, sunset } = useSelector((state) => state.weather);
   const temperature = useSelector((state) => state.weather.days[0].main.temp);
 

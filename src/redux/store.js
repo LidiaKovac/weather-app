@@ -1,5 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { loadingReducer } from "./reducers/loading";
+import { timeReducer } from "./reducers/localTime";
 import { locationReducer } from "./reducers/location";
 import { weatherReducer } from "./reducers/weather";
 
@@ -8,5 +9,6 @@ export const store = configureStore({
     weather: weatherReducer,
     loading: loadingReducer,
     location: locationReducer,
+    localTime: timeReducer
   },
 });

@@ -2,23 +2,28 @@ import moment from "moment";
 import { useEffect, useState } from "react";
 import "./Suntime.css";
 import { WiSunrise, WiSunset } from "react-icons/wi";
+import { useSelector } from "react-redux";
 export const Suntime = ({ timestamp, type }) => {
   const [time, setTime] = useState("0:00");
   const [timeDiff, setTimeDiff] = useState("0");
+  const { timezone } = useSelector((state) => state.weather);
+  const { now } = useSelector((state) => state.localTime)
   useEffect(() => {
     setTime(convertToString(timestamp));
     calculateDiff(timestamp);
-  }, []);
+
+  }, [timestamp]);
   const convertToString = (ts) => {
-    let converted = moment.unix(ts);
-    return converted.hour() + ":" + converted.minutes();
+    let converted = moment.unix(ts)
+    converted.add(timezone, "seconds")
+    return converted.format("HH:mm");
   };
   const calculateDiff = (ts) => {
     // need to check sometime that is not in the middle of the night
     let converted = moment.unix(ts);
-    let now = moment(new Date());
-    console.log(converted, now);
-    let diff = now.to(converted);
+    converted.add(timezone, "seconds")
+    let nowDate = moment(new Date()).add(timezone, "seconds")
+    let diff = nowDate.to(converted);
     setTimeDiff(diff);
   };
   return (

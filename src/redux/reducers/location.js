@@ -10,7 +10,7 @@ export const locationReducer = (state = initialState, { type, payload }) => {
   switch (type) {
     //note to future self: never use mutating methods! .push is forbidden here :)
     case "SET_LOCATION":
-      console.log(payload);
+      console.log("location payload", payload);
       return {
         ...state,
         lat: payload.coords.lat,
