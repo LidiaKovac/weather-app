@@ -12,5 +12,6 @@ export const store = configureStore({
     location: locationReducer,
     localTime: timeReducer,
     error: errorReducer
-  },
+  }, 
+  devTools: process.env.NODE_ENV === 'development'
 });
