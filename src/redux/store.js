@@ -13,5 +13,5 @@ export const store = configureStore({
     localTime: timeReducer,
     error: errorReducer
   }, 
-  devTools: process.env.NODE_ENV === 'development'
+  devTools: process.env.REACT_APP_NODE_ENV === 'development'
 });
