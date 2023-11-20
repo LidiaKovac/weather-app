@@ -2,7 +2,7 @@ import moment from "moment";
 import { useState } from "react";
 import "./FullDate.css";
 export const FullDate = () => {
-  const [date, setDate] = useState(moment(new Date()));
+  const [date] = useState(moment(new Date()));
   return (
     <>
     <div className="date date--lg">

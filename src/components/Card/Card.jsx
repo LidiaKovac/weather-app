@@ -20,7 +20,8 @@ export const Card = ({ title, data, unit, prevData }) => {
       setPrevData(Number(prevData) * 100);
     }
     setDiff(Math.abs(convertedData - convertedPrevData).toFixed(1));
-  });
+  // eslint-disable-next-line
+  }, []);
   return (
     <div className="card__wrap">
       <div className="card__icon">

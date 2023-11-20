@@ -14,7 +14,7 @@ export const fetchWeather = async (city, country) => {
       let weather = await resWeather.json();
       weather.city.country = countryCodes.filter((country) => country.code === weather.city.country)[0].name;
       return weather;
-    } else throw "City not found";
+    } else throw new Error("City not found");
   } catch (error) {
     console.log(error)
   }

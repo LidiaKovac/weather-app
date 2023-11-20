@@ -25,6 +25,7 @@ export const Weather = () => {
       .finally(() => {
         dispatch({ type: "SET_LOADING", payload: false });
       });
+      // eslint-disable-next-line
   }, []);
   const loading = useSelector((state) => state.loading.value);
   return loading ? (

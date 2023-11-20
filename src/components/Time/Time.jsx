@@ -14,6 +14,7 @@ export const Time = ({color, size}) => {
       setTime(moment(new Date()).add(timezone, "seconds").subtract(1, "hour").format("HH:mm"));
     }
     dispatch({ type: "SET_TIME", time });
+    // eslint-disable-next-line
   }, [timezone]);
   return <span style={{color: color, fontSize: size + "px"}} className="time__wrap">{time}</span>;
 };

@@ -10,6 +10,7 @@ export const Suntime = ({ timestamp, type }) => {
   useEffect(() => {
     setTime(convertToString(timestamp));
     calculateDiff(timestamp);
+    // eslint-disable-next-line
   }, [timestamp]);
   const convertToString = (ts) => {
     let converted = moment.unix(ts);
